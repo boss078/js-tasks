@@ -8,10 +8,10 @@ $(document).ready(function() {
 	const checkWin = function CheckIfWonOfPlayersWin() {
 		let currSymbol;
 		let isWon;
-		for(let column = 0; column <= 3; column += 1) {
+		for(let column = 0; column < 3; column += 1) {
 			currSymbol = ""
 			isWon = true;
-			for(let line = 0; line <= 3; line += 1) {
+			for(let line = 0; line < 3; line += 1) {
 				if(getTextFromArray(line, column) === " ") {
 					isWon = false;
 					break;
@@ -30,10 +30,10 @@ $(document).ready(function() {
 					return 2;
 			}
 		}
-		for(let line = 0; line <= 3; line += 1) {
+		for(let line = 0; line < 3; line += 1) {
 			currSymbol = ""
 			isWon = true;
-			for(let column = 0; column <= 3; column += 1) {
+			for(let column = 0; column < 3; column += 1) {
 				if(getTextFromArray(line, column) === " ") {
 					isWon = false;
 					break;
@@ -45,10 +45,16 @@ $(document).ready(function() {
 					break;
 				}	
 			}
+			if(isWon === true) {
+				if(currSymbol === "X")
+					return 1;
+				else
+					return 2;
+			}
 		}
-		for(let line = 0, column = 0; line <= 3; line += 1, column += 1) {
-			currSymbol = ""
-			isWon = true;
+		currSymbol = ""
+		isWon = true;
+		for(let line = 0, column = 0; line < 3; line += 1, column += 1) {
 			if(getTextFromArray(line, column) === " ") {
 					isWon = false;
 					break;
@@ -60,9 +66,15 @@ $(document).ready(function() {
 				break;
 			}			
 		}
-		for(let line = 0, column = 3; line <= 3; line += 1, column -= 1) {
-			currSymbol = ""
-			isWon = true;
+		if(isWon === true) {
+			if(currSymbol === "X")
+				return 1;
+			else
+				return 2;
+		}
+		currSymbol = ""
+		isWon = true;
+		for(let line = 0, column = 2; line < 3; line += 1, column -= 1) {
 			if(getTextFromArray(line, column) === " ") {
 					isWon = false;
 					break;
@@ -82,19 +94,42 @@ $(document).ready(function() {
 		}
 		return 0;
 	};
+
+	const checkTie = function checkIfAllCellsAreFilled(){
+		let isTie = true;
+		for (let line = 0; line < 3; line += 1)
+			for (let column = 0; column < 3; column += 1)
+				if (getTextFromArray(line, column) === " ")
+					isTie = false;
+		if (isTie === true)
+			return true;
+		return false;
+	};
 	
 	let isPlaying = true;
 	let currPlayer = "X";
-	$("#clickable").click(function(){
-		if (isPlaying === true && $(this).text() === "") {
+	$("div.game-status-message").hide();
+	$(".clickable").click(function(){
+		console.log('Text: "' + $(this).text() + '"');
+		if (isPlaying === true && $(this).text() === " ") {
 			$(this).text(currPlayer);
 			let winStatus = checkWin();
-			if(winStatus === 0)
+			if(winStatus === 0) {
 				if(currPlayer === "X")
 					currPlayer = "O";
 				else
 					currPlayer = "X";
-				
+				if (checkTie() === true) {
+					isPlaying = false;
+					$("div.game-status-message").show();
+					$("div.game-status-message").text("Tie!");
+				}
+			}
+			else {
+				isPlaying = false;
+				$("div.game-status-message").show();
+				$("div.game-status-message").text("Player " + currPlayer + " win!");
+			}
 		}
 	});
 });
