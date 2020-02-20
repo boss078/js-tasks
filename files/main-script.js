@@ -1,10 +1,30 @@
 $(document).ready(function() {
-	const getTextFromArray = function getTextFromArrayWithId(line, column) {
-		return $("#" + line.toString() + column.toString()).text();
+	const getPictureFromArray = function getPictureNameFromArrayWithId(line, column) {
+		let elemHtml = "";
+		switch(arguments.length) { 
+			case 1:
+				elemHtml = $(line).html();
+			break;
+			case 2:
+				elemHtml = $("#" + line.toString() + column.toString()).html();
+			break;
+		}
+		let answ = "";
+		for (let i = 14; elemHtml[i] != '.'; i += 1)
+			answ += elemHtml[i];
+		return answ;
 	}
-	const setTextFromArray = function setTextFromArrayWithId(line, column, value) {
-		$("#" + line.toString() + column.toString()).text(value.toString());
+	const setPictureFromArray = function setPictureNameFromArrayWithId(line, column, value) {
+		switch(arguments.length) {
+			case 2:
+				$(line).html("<img src=\"img/" + column.toString() + ".png\"> ");
+			break;
+			case 3:
+				$("#" + line.toString() + column.toString()).html("<img src=\"img/" + value.toString() + ".png\"> ");
+			break;
+		}
 	}
+
 	const checkWin = function CheckIfWonOfPlayersWin() {
 		let currSymbol;
 		let isWon;
@@ -12,13 +32,13 @@ $(document).ready(function() {
 			currSymbol = ""
 			isWon = true;
 			for(let line = 0; line < 3; line += 1) {
-				if(getTextFromArray(line, column) === " ") {
+				if(getPictureFromArray(line, column) === "Blank") {
 					isWon = false;
 					break;
 				}
 				if (currSymbol === "") {
-					currSymbol = getTextFromArray(line, column);
-				} else if(currSymbol != getTextFromArray(line, column)){
+					currSymbol = getPictureFromArray(line, column);
+				} else if(currSymbol != getPictureFromArray(line, column)){
 					isWon = false;
 					break;
 				}	
@@ -34,13 +54,13 @@ $(document).ready(function() {
 			currSymbol = ""
 			isWon = true;
 			for(let column = 0; column < 3; column += 1) {
-				if(getTextFromArray(line, column) === " ") {
+				if(getPictureFromArray(line, column) === "Blank") {
 					isWon = false;
 					break;
 				}
 				if (currSymbol === "") {
-					currSymbol = getTextFromArray(line, column);
-				} else if(currSymbol != getTextFromArray(line, column)){
+					currSymbol = getPictureFromArray(line, column);
+				} else if(currSymbol != getPictureFromArray(line, column)){
 					isWon = false;
 					break;
 				}	
@@ -55,13 +75,13 @@ $(document).ready(function() {
 		currSymbol = ""
 		isWon = true;
 		for(let line = 0, column = 0; line < 3; line += 1, column += 1) {
-			if(getTextFromArray(line, column) === " ") {
+			if(getPictureFromArray(line, column) === "Blank") {
 					isWon = false;
 					break;
 				}
 			if (currSymbol === "") {
-				currSymbol = getTextFromArray(line, column);
-			} else if(currSymbol != getTextFromArray(line, column)){
+				currSymbol = getPictureFromArray(line, column);
+			} else if(currSymbol != getPictureFromArray(line, column)){
 				isWon = false;
 				break;
 			}			
@@ -75,13 +95,13 @@ $(document).ready(function() {
 		currSymbol = ""
 		isWon = true;
 		for(let line = 0, column = 2; line < 3; line += 1, column -= 1) {
-			if(getTextFromArray(line, column) === " ") {
+			if(getPictureFromArray(line, column) === "Blank") {
 					isWon = false;
 					break;
 				}
 			if (currSymbol === "") {
-				currSymbol = getTextFromArray(line, column);
-			} else if(currSymbol != getTextFromArray(line, column)){
+				currSymbol = getPictureFromArray(line, column);
+			} else if(currSymbol != getPictureFromArray(line, column)){
 				isWon = false;
 				break;
 			}			
@@ -99,20 +119,27 @@ $(document).ready(function() {
 		let isTie = true;
 		for (let line = 0; line < 3; line += 1)
 			for (let column = 0; column < 3; column += 1)
-				if (getTextFromArray(line, column) === " ")
+				if (getPictureFromArray(line, column) === "Blank")
 					isTie = false;
 		if (isTie === true)
 			return true;
 		return false;
 	};
+
+	const init = function initializeAllValuesAndCells(){
+		isPlaying = true;
+		currPlayer = "X";
+		$(".hidden").hide();
+		$(".cell").html("<img src=\"img/Blank.png\"> ");
+	}
 	
-	let isPlaying = true;
-	let currPlayer = "X";
-	$("div.game-status-message").hide();
-	$(".clickable").click(function(){
-		console.log('Text: "' + $(this).text() + '"');
-		if (isPlaying === true && $(this).text() === " ") {
-			$(this).text(currPlayer);
+	let isPlaying;
+	let currPlayer;
+	init();
+
+	$(".cell").click(function(){
+		if (isPlaying === true && getPictureFromArray(this) === "Blank") {
+			setPictureFromArray(this, currPlayer);
 			let winStatus = checkWin();
 			if(winStatus === 0) {
 				if(currPlayer === "X")
@@ -121,15 +148,21 @@ $(document).ready(function() {
 					currPlayer = "X";
 				if (checkTie() === true) {
 					isPlaying = false;
-					$("div.game-status-message").show();
-					$("div.game-status-message").text("Tie!");
+					$("div.hidden").show();
+					$("div.hidden").text("Tie!");
+					$("button.hidden").show();
 				}
 			}
 			else {
 				isPlaying = false;
-				$("div.game-status-message").show();
-				$("div.game-status-message").text("Player " + currPlayer + " win!");
+				$("div.hidden").show();
+				$("div.hidden").text("Player " + currPlayer + " win!");
+				$(".hidden").show();
 			}
 		}
+	});
+
+	$("button.hidden").click(function(){
+		init();
 	});
 });
