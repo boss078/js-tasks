@@ -1,1 +1,5 @@
 files/jquery-3.4.1.js
+files/node_modules/
+files/.eslintrc.js
+files/package.json
+files/package-lock.json
