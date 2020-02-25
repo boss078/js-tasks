@@ -3,3 +3,8 @@ files/node_modules/
 files/.eslintrc.js
 files/package.json
 files/package-lock.json
+files/.sass-cache
+files/package.json
+files/package-lock.json
+files/style.css.map
+files/style.scss
