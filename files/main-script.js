@@ -3,29 +3,31 @@ $(document).ready(() => {
   let currPlayer;
 
   const getPictureFromArray = function getPictureNameFromArrayWithId(line, column) {
-    let elemHtml = '';
+    let bgrImage = '';
     switch (arguments.length) {
       case 1:
-        elemHtml = $(line).html();
+        bgrImage = $(line).css('background-image');
         break;
       case 2:
-        elemHtml = $(`#${line.toString()}${column.toString()}`).html();
+        bgrImage = $('.game-field__cell_arr-pos_' + line.toString() + column.toString()).css('background-image');
         break;
       default:
         console.log('Wrong use of getPictureFromArray');
     }
     let answ = '';
-    for (let i = 14; elemHtml[i] !== '.'; i += 1) answ += elemHtml[i];
+    let i = bgrImage.indexOf('img');
+    i += 4
+    for (; bgrImage[i] !== '.'; i += 1) answ += bgrImage[i];
     return answ;
   };
 
   const setPictureFromArray = function setPictureNameFromArrayWithId(line, column, value) {
     switch (arguments.length) {
       case 2:
-        $(line).html(`<img src="img/${column.toString()}.png"> `);
+        $(line).css('background-image', 'url("../files/img/' + column.toString() + '.png")');
         break;
       case 3:
-        $(`#${line.toString()}${column.toString()}`).html(`<img src="img/${value.toString()}.png"> `);
+        $('.game-field__cell_arr-pos_' + line.toString() + column.toString()).css('background-image', 'url("../files/img/' + value.toString() + '.png")');
         break;
       default:
         console.log('Wrong use of setPictureFromArray');
@@ -125,10 +127,10 @@ $(document).ready(() => {
     isPlaying = true;
     currPlayer = 'X';
     $('.hidable').hide();
-    $('.cell').html('<img src="img/Blank.png"> ');
+    $('.wrapper__cell').css({'background-image':'url("../files/img/Blank.png")'});
   };
 
-  $('.cell').click(function () {
+  $('.wrapper__cell').click(function () {
     if (isPlaying === true && getPictureFromArray(this) === 'Blank') {
       setPictureFromArray(this, currPlayer);
       const winStatus = checkWin();

@@ -1,0 +1,33 @@
+
+//img {
+//	max-width: 100%;
+//	max-height: 100%;
+//	display: block;
+//}
+
+.break {
+	flex-basis: 100%;
+}
+
+.wrapper {
+
+	&__game-field {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__cell {
+		width: 200px;
+		height: 200px;
+		border: solid black 1px;
+	}
+}
+@media (max-width: 700px), (max-height: 700px) {
+	.wrapper {
+		&__cell {
+				width: 30vw;
+				height: 30vh;
+			background-size: 100% 100%;
+		}
+	}
+}
