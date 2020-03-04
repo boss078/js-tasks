@@ -1,4 +1,5 @@
-$curr-color: #4285f4;
+$select-color: #4285f4;
+$default-color: #5f6368;
 
 body {
 	margin: 0px;
@@ -72,7 +73,7 @@ body {
 		height: 24px;
 		width: 24px;
 		&_path {
-			fill: $curr-color;
+			fill: $select-color;
 		}
 	}
 }
@@ -86,20 +87,30 @@ body {
 	}
 }
 .primary-nav {
-	padding: 16px 12px 12px 10px;
 	white-space: nowrap;
-	&__all-button-wrapper {
-		display: inline-block;
-		flood-color: $curr-color;
+	&__button-wrapper {
+		display: inline-flex;
+		padding: 16px 12px 12px 10px;
 	}
 }
-.all-button-wrapper {
-	&__all-button {
-		display: block;
-		height: 16px;
-		width: 16px;
-		&_path {
-			//fill: $curr-color;
-		}
+.button-wrapper {
+	color: $default-color;
+	&:hover {
+		color: $select-color;
 	}
+	&__button-image-wrapper {
+		display: block;
+	}
+	&__text {
+		display: block;
+	}
+}
+.button-image-wrapper {
+	&__button-image {
+		&_path_changable {
+			fill: $default-color;
+		}
+
+	}
+	
 }
