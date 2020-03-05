@@ -58,11 +58,10 @@ body {
 
 .primary-nav {
   white-space: nowrap; }
-  .primary-nav__button-wrapper {
-    display: inline-flex;
-    padding: 16px 12px 12px 10px; }
 
 .button-wrapper {
+  display: inline-flex;
+  padding: 16px 12px 12px 10px;
   color: #5f6368; }
   .button-wrapper:hover {
     color: #4285f4; }
@@ -70,6 +69,16 @@ body {
     display: block; }
   .button-wrapper__text {
     display: block; }
+  .button-wrapper_border_selected {
+    border-bottom: 3px solid #1A73E8;
+    color: #1A73E8; }
+  .button-wrapper_border_default {
+    padding: 4px 11px;
+    border: 1px solid transparent;
+    border-radius: 2px; }
+    .button-wrapper_border_default:hover {
+      color: #5f6368;
+      border: 1px solid #ebebeb; }
 
 .button-image-wrapper__button-image_path_changable {
   fill: #5f6368; }
