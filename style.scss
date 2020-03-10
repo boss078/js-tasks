@@ -34,7 +34,7 @@ body {
 			border: 1px solid #fff;
 		}
 		display: flex;
-		width: 640px;
+		min-width: 640px;
 		height: 40px;
 		border: 1px solid $border-color;
 		border-radius: 24px;
@@ -313,15 +313,20 @@ h3 {
     	margin-block-end: 15px;
 	}
 	&__video-block {
-
+		display: flex;
+		flex-direction: row;
+		margin-left: -20px;
+		padding-bottom: 30px;
 	}
 }
 .video-block {
 	&__video-item {
+		margin: 4px;
 		border: 1px solid #dfe1e5;
     	border-radius: 8px;
-    	display: inline-flex;
+    	display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 .video-item {

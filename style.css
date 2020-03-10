@@ -17,7 +17,7 @@ body {
 .search-part__search-form {
   box-shadow: none;
   display: flex;
-  width: 640px;
+  min-width: 640px;
   height: 40px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
@@ -202,12 +202,19 @@ h3 {
 .video-part__text {
   margin-block-start: 15px;
   margin-block-end: 15px; }
+.video-part__video-block {
+  display: flex;
+  flex-direction: row;
+  margin-left: -20px;
+  padding-bottom: 30px; }
 
 .video-block__video-item {
+  margin: 4px;
   border: 1px solid #dfe1e5;
   border-radius: 8px;
-  display: inline-flex;
-  flex-direction: column; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .video-item__wrapper-video {
   display: inline-block; }
