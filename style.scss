@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header-top {
+    padding-top: 31px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__header-bottom {
+
+  }
+}
+.header-top {
+  &__logo {
+    width: 148px;
+    height: 69px;
+    background-image: url(https://i.alicdn.com/ae-header/20200227160828/buyer/front/rumall/src/img/mall-header-svg/tmall.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__search {
+    display: flex;
+  }
+}
+
+.search {
+  height: 36px;
+
+  &__text {
+    margin-top: -17px;
+    width: 170px;
+    height: 80px;
+    background-image: url(https://i.alicdn.com/ae-header/20200227160828/buyer/front/rumall/src/img/tmall-slogan.gif);
+    background-size: cover;
+    background-repeat: no-repeat; 
+  }
+
+  &__search-form {
+    display: flex;
+    height: 36px;
+  }
+
+  &__search-item {
+    display: flex;
+    padding-left: 30px;
+  }
+}
+
+.search-form {
+  &__button {
+    width: 38px;
+    background: #FF0036 url(/ae-header/20200227160828/buyer/front/rumall/src/img/mall-header-svg/mall_search.svg) no-repeat center center;
+
+  }
+  &__input {
+    text-outline: none;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px 0 0 3px;
+    padding-left: 20px;
+    width: 520px;
+  }
+}
+
+.search-item {
+  padding-top: 5px;
+
+  &:hover {
+    fill: #333;
+    color: #333;
+    & .red-on-hover {
+      fill: #FF0036;
+      color: #FF0036;
+    }
+  }
+
+  &__image {
+    width: 25px;
+    height: 25px;
+    background-position: 0 0;
+    background-size: 100% 100%;
+  }
+  &__text {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+  }
+}
+
+.header-bottom {
+  display: flex;
+  &__category-item {
+    display: flex;
+    padding: 20px 12px 12px 12px;
+    font: inherit;
+    font-size: 14px;
+
+    &_text {
+
+    }
+    &_image {
+      margin-top: 5px;
+      padding: 5px;
+      height: 18px;
+      width: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .bottom-border {
+    &:hover {
+        border-bottom: 3px solid #FF0036;
+        fill: #FF0036;
+        color: #FF0036;
+      }
+  }
+
+  &__space-between {
+    width: 200px;
+  }
+
+  &__menu-item {
+    color: #787878;
+    &:hover {
+      color: #FF0036;
+    }
+  }
+}
+
+.border-line {
+    width: auto;
+    border-bottom: 2px solid #ececec;
+  }
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */

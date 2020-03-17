@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__header-top {
+  padding-top: 31px;
+  display: flex;
+  flex-direction: row;
+}
+.header-top__logo {
+  width: 148px;
+  height: 69px;
+  background-image: url(https://i.alicdn.com/ae-header/20200227160828/buyer/front/rumall/src/img/mall-header-svg/tmall.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.header-top__search {
+  display: flex;
+}
+
+.search {
+  height: 36px;
+}
+.search__text {
+  margin-top: -17px;
+  width: 170px;
+  height: 80px;
+  background-image: url(https://i.alicdn.com/ae-header/20200227160828/buyer/front/rumall/src/img/tmall-slogan.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search__search-form {
+  display: flex;
+  height: 36px;
+}
+.search__search-item {
+  display: flex;
+  padding-left: 30px;
+}
+
+.search-form__button {
+  width: 38px;
+  background: #FF0036 url(/ae-header/20200227160828/buyer/front/rumall/src/img/mall-header-svg/mall_search.svg) no-repeat center center;
+}
+.search-form__input {
+  text-outline: none;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px 0 0 3px;
+  padding-left: 20px;
+  width: 520px;
+}
+
+.search-item {
+  padding-top: 5px;
+}
+.search-item:hover {
+  fill: #333;
+  color: #333;
+}
+.search-item:hover .red-on-hover {
+  fill: #FF0036;
+  color: #FF0036;
+}
+.search-item__image {
+  width: 25px;
+  height: 25px;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+.search-item__text {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.header-bottom {
+  display: flex;
+}
+.header-bottom__category-item {
+  display: flex;
+  padding: 20px 12px 12px 12px;
+  font: inherit;
+  font-size: 14px;
+}
+.header-bottom__category-item_image {
+  margin-top: 5px;
+  padding: 5px;
+  height: 18px;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+.header-bottom .bottom-border:hover {
+  border-bottom: 3px solid #FF0036;
+  fill: #FF0036;
+  color: #FF0036;
+}
+.header-bottom__space-between {
+  width: 200px;
+}
+.header-bottom__menu-item {
+  color: #787878;
+}
+.header-bottom__menu-item:hover {
+  color: #FF0036;
+}
+
+.border-line {
+  width: auto;
+  border-bottom: 2px solid #ececec;
+}
+
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.css.map */
