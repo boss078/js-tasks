@@ -6,9 +6,11 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  width: 1400px;
-  margin-left: auto;
+  min-width: 990px;
+  max-width: 1348px;
+  width: 100%;
   margin-right: auto;
+  margin-left: auto;
 }
 .header__header-top {
   padding-top: 31px;
@@ -103,7 +105,7 @@ body {
   color: #FF0036;
 }
 .header-bottom__space-between {
-  width: 200px;
+  width: 192px;
 }
 .header-bottom__menu-item {
   color: #787878;
@@ -115,6 +117,237 @@ body {
 .border-line {
   width: auto;
   border-bottom: 2px solid #ececec;
+}
+
+.link {
+  display: flex;
+  margin: 15px auto;
+  min-width: 990px;
+  max-width: 1348px;
+  width: 100%;
+  font-size: 13px;
+}
+.link__path {
+  color: #787878;
+  margin-right: 10px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  min-width: 990px;
+  max-width: 1348px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+}
+.list__filters {
+  width: 180px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0 8px 20px 0;
+  margin-bottom: 10px;
+}
+.filters__filters-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.filters__filters-header_header {
+  display: flex;
+  padding-left: 5px;
+  margin-bottom: 9px;
+  font-size: 12px;
+  color: #333;
+}
+.filters__filters-header_header_img {
+  margin-top: 7px;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+  background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png);
+  background-position: 0 -263px;
+  background-repeat: no-repeat;
+}
+.filters__filters-header_super-item {
+  font-size: 14px;
+  color: #666;
+  line-height: 16px;
+  padding: 6px 0;
+}
+.filters__filters-header_item {
+  padding: 6px 10px;
+}
+.filters__filter-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  padding: 12px 0;
+}
+
+.filter-item__header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3px;
+  padding-left: 13px;
+  margin-bottom: 13px;
+}
+.filter-item__header_left {
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  font-size: 12px;
+}
+.filter-item__header_left_img {
+  margin-left: -10px;
+  width: 10px;
+  height: 10px;
+  background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png);
+  background-position: 0 -263px;
+  background-repeat: no-repeat;
+}
+.filter-item__header_right {
+  text-align: right;
+  color: #bbb;
+}
+.filter-item__item {
+  line-height: 17px;
+  padding: 3px 0 8px 0;
+}
+
+.list-right {
+  display: flex;
+  width: 1118px;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.list-right__list-header {
+  display: flex;
+  flex-direction: column;
+}
+.list-right__list-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-header__sort-items {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.list-header__list-filters {
+  display: flex;
+  flex-direction: row;
+}
+.list-header__list-header-down {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  line-height: 24px;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.sort-items__item {
+  width: 58px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.list-filters__item {
+  font-size: 13px;
+  margin: 0 5px;
+}
+.list-filters__item_img {
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.text-input {
+  height: 26px;
+  width: 60px;
+  border: 1px solid #ccc;
+  padding: 5px 4px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 12px;
+  margin: -3px -2px 3px 0;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  margin-right: -2px;
+}
+
+.list-header-down__list-subfilters {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+}
+.list-header-down__white-space {
+  flex: 15%;
+}
+.list-header-down__view-chooser {
+  display: flex;
+}
+
+.view-chooser__item {
+  margin: 5px;
+}
+
+.list-subfilters__item {
+  display: flex;
+  padding: 0 5px;
+  border-left: 1px solid #eee;
+}
+.list-subfilters__item_img {
+  background-image: url(https://i.alicdn.com/ae-search-ui/common/img/newX2-s49d70255ad.11b1f40e.png);
+  background-size: 97px 821px;
+  background-position: 0 -725px;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0 0 5px;
+}
+
+.list-main__list-item {
+  max-width: 220px;
+  padding: 30px 29px 15px;
+  border-top: 1px solid #eee;
+}
+
+.list-item__list-image {
+  height: 220px;
+  width: 220px;
+}
+.list-item__colors {
+  height: 24px;
+  background-color: #F5F5F5;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 4px;
+  font-size: 13px;
+}
+.list-item__list-header {
+  color: #036;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.list-item__list-info {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */
