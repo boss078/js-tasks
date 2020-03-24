@@ -3,6 +3,8 @@
     <title>
       TMall
     </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
@@ -416,124 +418,268 @@
             </div>
             <div class="list-header-down__view-chooser view-chooser">
               Вид:
-              <div class="view-chooser__item" style="background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png); background-position: 0 -469px; background-repeat: no-repeat; width: 24px; height: 18px">
+              <div class="view-chooser__item choose-list" style="background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png); background-position: 0 -469px; background-repeat: no-repeat; width: 24px; height: 18px">
               </div>
-              <div class="view-chooser__item" style="background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png); background-position: 0 -289px; background-repeat: no-repeat; width: 18px; height: 18px">
+              <div class="view-chooser__item choose-grid" style="background-image: url(https://i.alicdn.com/ae-search-ui/common/img/new-sd179874dc2.927cedb6.png); background-position: 0 -289px; background-repeat: no-repeat; width: 18px; height: 18px">
               </div>
             </div>
           </div>
         </div>
         <div class="list-right__list-main list-main">
           <div class="list-main__list-item list-item">
-            <div class="list-item__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+            <div class="list-item__upper-block upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
             </div>
-            <div class="list-item__colors">
-              Доступно цветов: 2 
-            </div>
-            <div class="list-item__list-header">
-              <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+            <div class="list-item__list-header list-header">
+              <img class="list-header__img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
               Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
             </div>
-            <div class="list-item__list-info">
-              <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
-              <span style="color: #999; font-size: 13px;"> / шт.</span>
-            </div>
-            <div class="list-item__list-info">
-              <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
-              <span style="color: #FF0036; font-size: 12px;">- 20%</span>
-            </div>
-            <div class="list-item__list-info">
-              <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
-              <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
-            </div>
-            <div class="list-item__list-info">
-              <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
-              <span style="color: #666; font-size: 14px;">(13764) | </span>
-              <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+            <div class="list-item__info-block info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
             </div>
           </div>
           <div class="list-main__list-item list-item">
-            <div class="list-item__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
-            </div>
-            <div class="list-item__colors">
-              Доступно цветов: 2 
+            <div class="list-item__upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
             </div>
             <div class="list-item__list-header">
               <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
               Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
             </div>
-            <div class="list-item__list-info">
-              <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
-              <span style="color: #999; font-size: 13px;"> / шт.</span>
-            </div>
-            <div class="list-item__list-info">
-              <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
-              <span style="color: #FF0036; font-size: 12px;">- 20%</span>
-            </div>
-            <div class="list-item__list-info">
-              <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
-              <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
-            </div>
-            <div class="list-item__list-info">
-              <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
-              <span style="color: #666; font-size: 14px;">(13764) | </span>
-              <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+            <div class="list-item__info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
             </div>
           </div>
           <div class="list-main__list-item list-item">
-            <div class="list-item__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+            <div class="list-item__upper-block upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
             </div>
-            <div class="list-item__colors">
-              Доступно цветов: 2 
-            </div>
-            <div class="list-item__list-header">
-              <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+            <div class="list-item__list-header list-header">
+              <img class="list-header__img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
               Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
             </div>
-            <div class="list-item__list-info">
-              <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
-              <span style="color: #999; font-size: 13px;"> / шт.</span>
-            </div>
-            <div class="list-item__list-info">
-              <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
-              <span style="color: #FF0036; font-size: 12px;">- 20%</span>
-            </div>
-            <div class="list-item__list-info">
-              <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
-              <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
-            </div>
-            <div class="list-item__list-info">
-              <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
-              <span style="color: #666; font-size: 14px;">(13764) | </span>
-              <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+            <div class="list-item__info-block info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
             </div>
           </div>
           <div class="list-main__list-item list-item">
-            <div class="list-item__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
-            </div>
-            <div class="list-item__colors">
-              Доступно цветов: 2 
+            <div class="list-item__upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
             </div>
             <div class="list-item__list-header">
               <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
               Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
             </div>
-            <div class="list-item__list-info">
-              <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
-              <span style="color: #999; font-size: 13px;"> / шт.</span>
+            <div class="list-item__info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
             </div>
-            <div class="list-item__list-info">
-              <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
-              <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+          </div>
+          <div class="list-main__list-item list-item">
+            <div class="list-item__upper-block upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
             </div>
-            <div class="list-item__list-info">
-              <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
-              <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+            <div class="list-item__list-header list-header">
+              <img class="list-header__img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+              Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
             </div>
-            <div class="list-item__list-info">
-              <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
-              <span style="color: #666; font-size: 14px;">(13764) | </span>
-              <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+            <div class="list-item__info-block info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
+            </div>
+          </div>
+          <div class="list-main__list-item list-item">
+            <div class="list-item__upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
+            </div>
+            <div class="list-item__list-header">
+              <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+              Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
+            </div>
+            <div class="list-item__info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
+            </div>
+          </div>
+          <div class="list-main__list-item list-item">
+            <div class="list-item__upper-block upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
+            </div>
+            <div class="list-item__list-header list-header">
+              <img class="list-header__img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+              Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
+            </div>
+            <div class="list-item__info-block info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
+            </div>
+          </div>
+          <div class="list-main__list-item list-item">
+            <div class="list-item__upper-block">
+              <div class="upper-block__list-image" style="background-image: url(https://ae01.alicdn.com/kf/He70db0d8f2cd42048663490ab438cd04H/Smartphone-Xiaomi-Redmi-7A-RU-32-GB-Get-A-coupon-for-600-rub-valid-November-Official.jpg_220x220.jpg)">
+              </div>
+              <div class="upper-block__colors">
+                Доступно цветов: 2 
+              </div>
+            </div>
+            <div class="list-item__list-header">
+              <img class="list-item__list-header_img" src="https://ae01.alicdn.com/kf/HTB1uaaiXvvsK1Rjy0Fi762wtXXa8.png" width="43" height="14">
+              Смартфон Xiaomi Redmi RU 7A RU 32ГБ,Доп. скидка 2% от 4шт.[Официальная гарантия, быстрая доставка]
+            </div>
+            <div class="list-item__info-block">
+              <div class="info-block__list-info">
+                <span style="color: #FF0036; font-size: 16px;">7 790,00 руб.</span>
+                <span style="color: #999; font-size: 13px;"> / шт.</span>
+              </div>
+              <div class="info-block__list-info">
+                <del style="color: #999; font-size: 13px;">9 750,00 руб.</del>
+                <span style="color: #FF0036; font-size: 12px;">- 20%</span>
+              </div>
+              <div class="info-block__list-info">
+                <img src="https://ae01.alicdn.com/kf/HTB1wF5EbyYrK1Rjy0Fd763CvVXaz.png" width="43" height="14">
+                <span style="color: #8989C2; font-size: 13px;"> 6 727,50 руб.</span>
+              </div>
+              <div class="info-block__list-info">
+                <div style="background: url(https://i.alicdn.com/ae-search-ui/common/img/rating-stars.c8e2841c.png) repeat-x 0 -100px; background-position: 0 0; width: 70px"></div>
+                <span style="color: #666; font-size: 14px;">(13764) | </span>
+                <span style="color: #666; font-size: 14px; padding-left: 70px;"> По заказам (25687) </span>
+              </div>
             </div>
           </div>
         </div>
