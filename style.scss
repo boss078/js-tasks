@@ -1,11 +1,13 @@
+$header-mobile: 990px;
+$header-menu-mobile: 1170px;
+
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 .header {
   display: flex;
   flex-direction: column;
-  min-width: 990px;
   max-width: 1348px;
   width: 100%;
   margin-right: auto;
@@ -23,6 +25,9 @@ body {
 }
 .header-top {
   &__logo {
+    @media (max-width: $header-mobile) {
+      display: none;
+    }
     width: 148px;
     height: 69px;
     background-image: url(https://i.alicdn.com/ae-header/20200227160828/buyer/front/rumall/src/img/mall-header-svg/tmall.svg);
@@ -31,7 +36,12 @@ body {
   }
 
   &__search {
+    flex-basis: 89%;
     display: flex;
+    @media (max-width: $header-mobile) {
+      justify-content: space-around;
+      flex-basis: 100%;
+    }
   }
 }
 
@@ -39,6 +49,9 @@ body {
   height: 36px;
 
   &__text {
+    @media (max-width: $header-mobile) {
+      display: none;
+    }
     margin-top: -17px;
     width: 170px;
     height: 80px;
@@ -49,13 +62,24 @@ body {
 
   &__search-form {
     display: flex;
+    @media (max-width: $header-mobile) {
+      display: none;
+    }
     height: 36px;
   }
 
   &__search-item {
     display: flex;
     padding-left: 30px;
+    @media (max-width: $header-mobile) {
+      padding-left: 0;
+    }
+    white-space: nowrap;
   }
+}
+
+.search-input-field {
+  flex-basis: 46%;
 }
 
 .search-form {
@@ -69,7 +93,7 @@ body {
     border: 1px solid #cbcbcb;
     border-radius: 3px 0 0 3px;
     padding-left: 20px;
-    width: 520px;
+    width: 100%;
   }
 }
 
@@ -100,11 +124,30 @@ body {
 
 .header-bottom {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+
+  &__category-group {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: auto;
+    @media (max-width: $header-menu-mobile) {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.category-group {
   &__category-item {
     display: flex;
-    padding: 20px 12px 12px 12px;
+    padding: 20px 12px 12px;
+    @media (max-width: $header-menu-mobile) {
+      flex-basis: 100%;
+      padding: 20px auto 12px;
+    }
     font: inherit;
     font-size: 14px;
+    white-space: nowrap;
 
     &_text {
 
@@ -126,10 +169,6 @@ body {
       }
   }
 
-  &__space-between {
-    width: 192px;
-  }
-
   &__menu-item {
     color: #787878;
     &:hover {
@@ -146,7 +185,7 @@ body {
 .link {
   display: flex;
   margin: 15px auto;
-  min-width: 990px;
+  //min-width: 990px;
   max-width: 1348px;
   width: 100%;
   font-size: 13px;
@@ -163,7 +202,6 @@ body {
 .list {
   display: flex;
   flex-direction: row;
-  min-width: 990px;
   max-width: 1348px;
   width: 100%;
   margin-right: auto;
@@ -285,10 +323,11 @@ body {
   &__list-filters {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   &__list-header-down {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     padding: 20px 0;
     line-height: 24px;
     font-size: 12px;
@@ -311,9 +350,16 @@ body {
 }
 
 .list-filters {
+  &__filter-item-group {
+    display: flex;
+  }
+}
+.filter-item-group {
   &__item {
     font-size: 13px;
     margin: 0 5px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     &_img {
       margin-top: 3px;
       margin-left: 5px;
@@ -341,7 +387,6 @@ body {
   &__list-subfilters {
     display: flex;
     flex-direction: row;
-    //flex: 70%;
     border: 1px solid #CCC;
     border-radius: 3px;
   }
@@ -362,6 +407,7 @@ body {
     display: flex;
     padding: 0 5px;
     border-left: 1px solid #eee;
+    white-space: nowrap;
     &_img {
       background-image: url(https://i.alicdn.com/ae-search-ui/common/img/newX2-s49d70255ad.11b1f40e.png);
       background-size: 97px 821px;
@@ -379,6 +425,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 20%;
+    min-width: 220px;
     border-top: 1px solid #eee;
     padding: 30px 2.5% 15px;
   }
@@ -392,17 +439,28 @@ body {
     flex-direction: column;
     //padding: 30px 29px 15px;
   }
+
+  &__list-info-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 72%;
+  }
+}
+
+.list-info-block {
   &__list-header {
     max-width: 220px;
     width: 100%;
     color: #036;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    height: 100px;
     //padding: 30px 29px 15px;
   }
   &__info-block {
     max-width: 220px;
     width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
     //padding: 30px 29px 15px;

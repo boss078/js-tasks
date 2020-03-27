@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  min-width: 990px;
   max-width: 1348px;
   width: 100%;
   margin-right: auto;
@@ -24,8 +23,20 @@ body {
   background-repeat: no-repeat;
   background-position: left top;
 }
+@media (max-width: 990px) {
+  .header-top__logo {
+    display: none;
+  }
+}
 .header-top__search {
+  flex-basis: 89%;
   display: flex;
+}
+@media (max-width: 990px) {
+  .header-top__search {
+    justify-content: space-around;
+    flex-basis: 100%;
+  }
 }
 
 .search {
@@ -39,13 +50,33 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (max-width: 990px) {
+  .search__text {
+    display: none;
+  }
+}
 .search__search-form {
   display: flex;
   height: 36px;
 }
+@media (max-width: 990px) {
+  .search__search-form {
+    display: none;
+  }
+}
 .search__search-item {
   display: flex;
   padding-left: 30px;
+  white-space: nowrap;
+}
+@media (max-width: 990px) {
+  .search__search-item {
+    padding-left: 0;
+  }
+}
+
+.search-input-field {
+  flex-basis: 46%;
 }
 
 .search-form__button {
@@ -57,7 +88,7 @@ body {
   border: 1px solid #cbcbcb;
   border-radius: 3px 0 0 3px;
   padding-left: 20px;
-  width: 520px;
+  width: 100%;
 }
 
 .search-item {
@@ -85,32 +116,49 @@ body {
 
 .header-bottom {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
-.header-bottom__category-item {
+.header-bottom__category-group {
   display: flex;
-  padding: 20px 12px 12px 12px;
+  justify-content: space-around;
+  flex-basis: auto;
+}
+@media (max-width: 1170px) {
+  .header-bottom__category-group {
+    flex-basis: 100%;
+  }
+}
+
+.category-group__category-item {
+  display: flex;
+  padding: 20px 12px 12px;
   font: inherit;
   font-size: 14px;
+  white-space: nowrap;
 }
-.header-bottom__category-item_image {
+@media (max-width: 1170px) {
+  .category-group__category-item {
+    flex-basis: 100%;
+    padding: 20px auto 12px;
+  }
+}
+.category-group__category-item_image {
   margin-top: 5px;
   padding: 5px;
   height: 18px;
   width: 20px;
   background-repeat: no-repeat;
 }
-.header-bottom .bottom-border:hover {
+.category-group .bottom-border:hover {
   border-bottom: 3px solid #FF0036;
   fill: #FF0036;
   color: #FF0036;
 }
-.header-bottom__space-between {
-  width: 192px;
-}
-.header-bottom__menu-item {
+.category-group__menu-item {
   color: #787878;
 }
-.header-bottom__menu-item:hover {
+.category-group__menu-item:hover {
   color: #FF0036;
 }
 
@@ -122,7 +170,6 @@ body {
 .link {
   display: flex;
   margin: 15px auto;
-  min-width: 990px;
   max-width: 1348px;
   width: 100%;
   font-size: 13px;
@@ -134,7 +181,6 @@ body {
 .list {
   display: flex;
   flex-direction: row;
-  min-width: 990px;
   max-width: 1348px;
   width: 100%;
   margin-right: auto;
@@ -241,10 +287,11 @@ body {
 .list-header__list-filters {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .list-header__list-header-down {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   padding: 20px 0;
   line-height: 24px;
   font-size: 12px;
@@ -264,11 +311,17 @@ body {
   padding: 5px;
 }
 
-.list-filters__item {
+.list-filters__filter-item-group {
+  display: flex;
+}
+
+.filter-item-group__item {
   font-size: 13px;
   margin: 0 5px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
-.list-filters__item_img {
+.filter-item-group__item_img {
   margin-top: 3px;
   margin-left: 5px;
 }
@@ -313,6 +366,7 @@ body {
   display: flex;
   padding: 0 5px;
   border-left: 1px solid #eee;
+  white-space: nowrap;
 }
 .list-subfilters__item_img {
   background-image: url(https://i.alicdn.com/ae-search-ui/common/img/newX2-s49d70255ad.11b1f40e.png);
@@ -328,6 +382,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 20%;
+  min-width: 220px;
   border-top: 1px solid #eee;
   padding: 30px 2.5% 15px;
 }
@@ -338,16 +393,24 @@ body {
   display: flex;
   flex-direction: column;
 }
-.list-item__list-header {
+.list-item__list-info-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 72%;
+}
+
+.list-info-block__list-header {
   max-width: 220px;
   width: 100%;
   color: #036;
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  height: 100px;
 }
-.list-item__info-block {
+.list-info-block__info-block {
   max-width: 220px;
   width: 100%;
+  height: 100px;
   display: flex;
   flex-direction: column;
 }
